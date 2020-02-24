@@ -143,3 +143,8 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+
+# other
+.training_1/
+.train_2/
+.checkpoint/
