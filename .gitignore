@@ -145,6 +145,6 @@ venv.bak/
 
 
 # other
-.training_1/
-.train_2/
-.checkpoint/
+training_1/
+train_2/
+checkpoint/
