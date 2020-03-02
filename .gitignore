@@ -148,3 +148,5 @@ venv.bak/
 training_1/
 train_2/
 checkpoint/
+logs/
+training_checkpoints/
