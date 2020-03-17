@@ -153,3 +153,6 @@ training_checkpoints/
 training_checkpoints_2/
 training_checkpoints_3/
 vectors/
+data/
+rnn_classify_checkpoints/
+text_cnn_checkpoints/
