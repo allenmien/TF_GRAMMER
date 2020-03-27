@@ -254,27 +254,27 @@ def train_step(inp, targ, enc_hidden):
 
 checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
 
-# EPOCHS = 200
-# for epoch in range(EPOCHS):
-#     start = time.time()
+EPOCHS = 200
+for epoch in range(EPOCHS):
+    start = time.time()
 
-#     enc_hidden = encoder.initialize_hidden_state()
-#     total_loss = 0
+    enc_hidden = encoder.initialize_hidden_state()
+    total_loss = 0
 
-#     for (batch, (inp, targ)) in enumerate(dataset.take(step_per_epoch)):
-#         batch_loss = train_step(inp, targ, enc_hidden)
+    for (batch, (inp, targ)) in enumerate(dataset.take(step_per_epoch)):
+        batch_loss = train_step(inp, targ, enc_hidden)
 
-#         total_loss += batch_loss
+        total_loss += batch_loss
 
-#         if batch % 100 == 0:
-#             print('Epoch {} Batch {} Loss {:.4f}'.format(
-#                 epoch + 1, batch, batch_loss.numpy()))
-#     if (epoch + 1) % 2 == 0:
-#         checkpoint.save(file_prefix = checkpoint_prefix)
+        if batch % 100 == 0:
+            print('Epoch {} Batch {} Loss {:.4f}'.format(
+                epoch + 1, batch, batch_loss.numpy()))
+    if (epoch + 1) % 2 == 0:
+        checkpoint.save(file_prefix = checkpoint_prefix)
 
-#     print('Epoch {} Loss {:.4f}'.format(epoch + 1,
-#                                         total_loss / step_per_epoch))
-#     print('Time taken for 1 epoch {} sec\n'.format(time.time() - start))
+    print('Epoch {} Loss {:.4f}'.format(epoch + 1,
+                                        total_loss / step_per_epoch))
+    print('Time taken for 1 epoch {} sec\n'.format(time.time() - start))
 
 
 def evaluate(sentence):

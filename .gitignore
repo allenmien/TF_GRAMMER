@@ -156,3 +156,4 @@ vectors/
 data/
 rnn_classify_checkpoints/
 text_cnn_checkpoints/
+bert_checkpoint/
